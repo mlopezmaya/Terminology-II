@@ -1,0 +1,1005 @@
+
+/* Common Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  font-family: "Jura", sans-serif;
+
+}
+
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  cursor: crosshair;
+
+
+}
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Section Heading */
+.section-heading {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 10rem;
+  transform: translateY(-50%);
+  width: 0;
+  word-break: break-all;
+  line-height: 4;
+}
+/* End of Section Heading */
+    /* Page BG */
+.page-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images.jpg) center no-repeat;
+  background-size: cover;
+}
+
+/* End of Page BG */
+
+  /* Menu Icon */
+  .menu-icon {
+    position: fixed;
+    top: 5rem;
+    right: 0;
+    width: 7rem;
+    height: 4rem;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s;
+  }
+
+  .menu-icon-line {
+    width: 4rem;
+    height: 0.4rem;
+    background-color: rgb(8, 145, 243);
+    margin: 0.5rem 0;
+
+  }
+
+  .show-menu-icon {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* End of Menu Icon */
+
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 2.5rem;
+    width: 95%;
+    background-color: rgb(8, 145, 243);
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 3rem;
+    z-index: 100;
+    transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+  }
+
+  .navbar-link {
+    font-family: 'Italianno', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: silver;
+    margin: 0 2.5rem;
+
+
+  }
+
+  .hide-navbar {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10rem);
+  }
+  /* End of Navbar */
+ 
+  .wrapper {
+    position: absolute;
+    top: 52rem;
+    right: -3rem;
+    visibility: visible;
+   
+  }
+  
+  .icon, .facebook .youtube {
+   position: fixed; 
+    color: #514f4f;
+    visibility: visible;
+   
+  }
+  
+  .wrapper .icon{
+    margin: 20px 20px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: block;
+    z-index: 2;
+    padding: 2rem 2rem;
+    position: relative;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  
+  .wrapper .icon span{
+    display: block;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  
+  .wrapper .icon span i{
+    line-height: 60px;
+    font-size: 25px;
+  }
+  
+  .tooltip {
+    position: absolute;
+    left: -1rem;
+  }
+  
+  .wrapper .icon .tooltip {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 25px;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  
+  .wrapper .icon:hover .tooltip{
+    top: -40px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  
+  .icon .tooltip:before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  
+  .wrapper .icon:hover span{
+    color: #fff;
+  }
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip{
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+  }
+  .wrapper .facebook:hover span,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip:before{
+    background: #3B5999;
+  }
+  .wrapper .twitter:hover span,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip:before{
+    background: #46C1F6;
+  }
+  .wrapper .instagram:hover span,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip:before{
+    background: #e1306c;
+  }
+  .wrapper .github:hover span,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip:before{
+    background: #333;
+  }
+  .wrapper .youtube:hover span,
+  .wrapper .youtube:hover .tooltip,
+  .wrapper .youtube:hover .tooltip:before{
+    background: #DE463B;
+  }
+  
+
+/* Logo in word */
+.global {
+  position: fixed;
+  border: solid 2px rgb(8, 145, 243);
+  top: 0rem;
+  left: -130rem;
+  width: 22.5rem;
+  height: 4rem;
+}
+
+.logo-w {
+  width: 19.1rem;
+  position: fixed;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-family: sans-serif;
+  color: rgb(140, 140, 140);
+  font-weight: 100;
+  left: -129.2rem;
+  top: 0.5rem;
+}
+
+.ii {
+  width: 2rem;
+  height: 2.9rem;
+  position: fixed;
+  font-size: 2.7rem;
+  font-family: "Share", sans-serif;
+  font-weight: 400;
+  color: silver;
+  left: -110.3rem;
+  top: 0.5rem;
+}
+
+
+.GOD-LA {
+  position: fixed;
+  font-size: 12px;
+  color: rgb(162, 183, 198);
+  left: -123rem;
+  top: 4.5rem;
+}
+/* End of Logo Word */
+    /* Section 1 */
+.section-1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  }
+
+
+.mcircle {
+  position: absolute;
+  width: 50rem;
+  height: 50rem;
+  left: 85rem;
+  top: 22rem;
+  border: solid 5px rgb(8, 145, 243);
+  border-radius: 90%;
+  background-color: none;
+}
+
+/* Rotate Image 1 */
+.rotate_01 {
+  display: block;
+  position: absolute;
+
+  top: 23.5rem;
+  left: 102rem;
+  width: 50rem;
+  height: 50rem;
+  margin: -15px 0 0 -17rem;
+  -webkit-transition: -webkit-transform 1s;
+}
+
+.rotate_01:hover {
+  -webkit-transform: rotate(360deg) translateZ(0);
+  border: solid 5px red;
+  border-radius: 90%;
+}
+
+/* End of Rotate Image 1 */
+
+/* Main Logo */
+.m-global {
+  position: absolute;
+  border: solid 4px rgb(8, 145, 243);
+  top: 43.8rem;
+  left: 90rem;
+  width: 39.5rem;
+  height: 6rem;
+}
+
+.m-logo-w {
+  width: 19.1rem;
+  position: absolute;
+  font-size: 4.5rem;
+  font-style: italic;
+  font-family: sans-serif;
+  color: rgb(140, 140, 140);
+  font-weight: 100;
+  left: 91rem;
+  top: 44.3rem;
+}
+
+.m-ii {
+  width: 2rem;
+  height: 2.9rem;
+  position: absolute;
+  font-size: 4.5rem;
+  font-family: "Share", sans-serif;
+  font-weight: 400;
+  color: silver;
+  left: 125rem;
+  top: 44.3rem;
+}
+
+
+.m-GOD-LA {
+  position: absolute;
+  font-size: 1.5rem;
+  color: rgb(162, 183, 198);
+  left: 105rem;
+  top: 53rem;
+}
+/* End of Main Logo */
+
+
+.heading-author {
+  position: absolute;
+  top: 16rem;
+ font-size: 4rem;
+  color: silver;
+  font-family: Astloch;
+  left: 33rem;
+
+
+
+}
+
+.definition {
+    position: absolute;
+    height: 55rem;
+    top: 22rem;
+    font-size: 3rem;
+    color: silver;
+    background-color: #00000053;
+  left: 30rem;
+  width: 50rem;
+}
+
+
+/* End of Section 1 */
+/* Section 2 */
+.section-2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+
+.image1 img {
+  top: 5rem;
+    width: 42rem;
+    height: 70rem;
+    left: 0rem;
+    position: absolute;
+}
+/* Logo */
+.GOD {
+    top: 33rem;
+    position: absolute;
+    right: 30rem;
+    font-size: 8rem;
+    color: white;
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
+    font-family: Astloch;
+    font-weight: bold 20px;
+    border: dotted 0.5px;
+  }
+
+
+
+/* End of Section 2 */
+
+/* Section 3 */
+.section-3 {
+    position: relative;
+    width: 100%;
+    height: 130rem;
+    top: 10rem;
+  }
+
+
+  .termi2 img{
+    position: absolute;
+    top: -15rem;
+    width: 60rem;
+    left: 75rem;
+  }
+
+  .termi img{
+    position: absolute;
+    top: 25rem;
+    width: 60rem;
+    left: 28rem;
+  }
+
+  .image img {
+    position: absolute;
+    top: 55rem;
+    left: 44rem;
+    width: 100rem;
+  }
+
+  /* End of Section 3 */
+
+/* Section 4 */
+.section-4 {
+  position: relative;
+  width: 100%;
+}
+
+/* Services */
+.services-wrapper {
+  width: 100%;
+  flex-direction: column;
+}
+
+.service {
+  width: 87%;
+  margin: 3rem 3rem;
+  border-bottom: 2px solid silver;
+}
+
+.service-btn {
+  width: 100%;
+  position: relative;
+  display: block;
+  height: 5rem;
+}
+
+.service-btn span {
+  font-family: "Poppins", sans-serif;
+  font-size: 5rem;
+  font-style: italic;
+  font-weight: bold;
+  color: silver;
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+  transition: right 0.5s;
+}
+
+.service-text {
+  font-size: 5rem;
+  color: rgb(8, 145, 243);
+  letter-spacing: 0.1rem;
+  height: 10rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.change.service-text {
+  height: 100rem;
+  visibility: visible;
+  opacity: 1;
+  transition: height 0.5s, opacity 0.5s 0.5s;
+}
+/* End of Services */
+
+/* End of Section 4 */
+
+
+  /* Section 5 */
+.section-5 {
+  position: relative;
+  width: 100%;
+  top: 10rem;
+  height: 100rem;
+  flex-direction: column;
+}
+
+
+/* Form */
+.form-heading {
+  font-size: 7rem;
+  margin-left: 22rem;
+  font-weight: 400;
+  font-family: 'Great Vibes', cursive;
+  color: rgb(8, 145, 243);
+  letter-spacing: 0.3rem;
+  margin-bottom: 3rem;
+  transition: opacity 0.3s;
+}
+
+.contact-form {
+  flex-direction: column;
+  margin-left: 5rem;
+  margin-bottom: 20rem;
+}
+
+.contact-form-input {
+  width: 60rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.1rem solid  rgb(8, 145, 243);
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #aaa;
+  letter-spacing: 0.1rem;
+  height: 5rem;
+}
+
+.contact-form-textarea {
+  height: 20rem;
+  resize: none;
+}
+
+.form-submit-btn {
+  width: 20rem;
+  height: 5rem;
+  margin-left: 21rem;
+  background-color:  rgb(8, 145, 243);
+  border: none;
+  align-self: flex-start;
+  font-size: 1.8rem;
+  color: silver;
+  cursor: pointer;
+  font-family:  "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* Form Validation */
+.message {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f55e5e;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin: 0 auto 1rem 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.error.message {
+  visibility: visible;
+  opacity: 1;
+}
+/* End of Form Validation */
+/* End of Form */
+
+  /* End of Section 5 */
+  /* Section 6 */
+  .section-6 {
+    position: relative;
+    width: 100%;
+    bottom: 5rem;
+  }
+    /* Links */
+
+    .websites {
+      position: absolute;
+      top: 5rem;
+    }
+
+
+ .links-wrapper {
+width: 80%;
+flex-direction: column;
+}
+
+.link {
+  width: 100%;
+  margin: 2rem 15rem;
+  left: 10rem;
+}
+
+.link-btn {
+  width: 100%;
+  position: relative;
+  display: block;
+  height: 15rem;
+}
+
+.link-btn span {
+  color: silver;
+  position: absolute;
+  font-size: 5rem;
+  right: 10rem;
+  pointer-events: visiblePainted;
+  transition: ease-in-out 5s;
+}
+
+.link-text {
+  font-size: 5rem;
+  color: rgb(8, 145, 243);
+  letter-spacing: 0.1rem;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 5s;
+}
+
+.change.link-text {
+  height: 15rem;
+  visibility: visible;
+  opacity: 1;
+  transition: all 5s;
+  transition: height 0.5s, opacity 0.5s 0.5s;
+  
+}
+  /* End of Links */
+
+  /* End of Section 6 */
+
+
+  /* Section 7 */
+  .section-7 {
+    position: relative;
+    width: 100%;
+    top: 10rem;
+height: 60rem;
+    background-color: #514f4f;
+  }
+
+  .thanks {
+    position: absolute;
+    top: 3rem;
+    font-size: 12rem;
+    font-family: 'Great Vibes', cursive;
+    color: rgb(8, 145, 243);
+  }
+  
+  .m-line {
+    position: absolute;
+ top: 13.5rem;
+    width: 90rem;
+    height: 2px;
+    background-color: silver;
+}
+
+
+
+ /* Logos */
+.logos {
+  position: absolute;
+  width:100%;
+  top: 20rem;
+}
+
+  .pic1 img {
+    position: absolute;
+    left: 3rem;
+    width: 10rem;
+    top: 1rem;
+    height: 8rem;
+  }
+
+  .pic2 img {
+    position: absolute;
+    left: 15rem;
+    top: 3rem;
+    width: 10rem;
+    height: 6rem;
+  }
+
+  .pic3 img {
+    position: absolute;
+    left: 27rem;
+    width: 8rem;
+    height: 4rem;
+    top: 4.5rem;
+  }
+
+  .pic4 img {
+    position: absolute;
+    left: 40rem;
+    width: 10rem;
+    height: 5rem;
+    top: 3rem;
+  }
+
+  .pic5 img {
+    position: absolute;
+    left: 55rem;
+    width: 8rem;
+    height: 5rem;
+    top: 3rem;
+  }
+
+  .pic6 img {
+    position: absolute;
+    left: 72rem;
+    width: 3rem;
+    height: 6rem;
+    top: 2rem;
+  }
+
+  .pic7 img {
+    position: absolute;
+    left: 80rem;
+    width: 8rem;
+    height: 6rem;
+    top: 2rem;
+  }
+
+  .pic8 img {
+    position: absolute;
+    left: 93rem;
+    width: 8rem;
+    height: 6rem;
+    top: 1.5rem;
+  }
+
+  .pic9 img {
+    position: absolute;
+    left: 104rem;
+    width: 8rem;
+    height: 6rem;
+    top: 2.5rem;
+  }
+
+  .pic10 img {
+    position: absolute;
+    left: 116rem;
+    width: 10rem;
+    height: 6rem;
+    top: 2rem;
+  }
+  
+  .pic11 img {
+    position: absolute;
+    left: 132rem;
+    width: 8rem;
+    height: 6rem;
+    top: 2rem;
+  }
+
+  .pic12 img {
+    position: absolute;
+    left: 130rem;
+    width: 10rem;
+    height: 6rem;
+    top: 2rem;
+  }
+  /* End of Logos */
+   /* End of Section 7 */
+   
+   
+.site-footer-inner {
+    position: absolute; 
+
+    flex-wrap: wrap;
+    padding-top: 48px;
+    padding-bottom: 48px;
+	top: 40rem;
+}
+
+.copy-logo-image {
+	position: absolute;
+	width: 10%;
+	top: -1.5rem;
+	left: 4rem;
+}
+
+.copy-mcircle {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  left: -21rem;
+  top: 13.5rem;
+  border: solid 0.5px rgb(8, 145, 243);
+  border-radius: 90%;
+  background-color: none;
+}
+
+
+.copy-global {
+  position: absolute;
+  border: solid 0.5px rgb(8, 145, 243);
+  top: 15.7rem;
+  left: -20.4rem;
+  width: 3.8rem;
+  height: 0.6rem;
+}
+
+.copy-logo-w {
+  width: 19.1rem;
+  position: absolute;
+  font-size: 0.4rem;
+  font-style: italic;
+  font-family: sans-serif;
+  color: rgb(140, 140, 140);
+  font-weight: 100;
+  left: -20.2rem;
+  top: 15.8rem;
+}
+
+.copy-ii {
+  width: 2rem;
+  height: 2.9rem;
+  position: absolute;
+  font-size: 0.4rem;
+  font-family: "Share", sans-serif;
+  font-weight: 400;
+  color: silver;
+  left: -17.2rem;
+  top: 15.8rem;
+}
+
+
+.copy-GOD-LA {
+  position: fixed;
+  font-size: 12px;
+  color: rgb(162, 183, 198);
+  left: 4rem;
+  top: -1.5rem;
+}
+
+
+.footer-brand,
+
+.footer-copyright {
+	position: absolute;
+	left: -15rem;
+    top: 15rem;
+    width: 50rem;
+
+	font-size: 2rem;
+	color: silver
+}
+
+.footer-brand {
+	position: absolute;
+    margin-bottom: 24px;
+    left: -25rem;
+	font-size: 2rem;
+}
+
+.terms {
+  position: absolute;
+	left: 62rem;
+    top: 52rem;
+    width: 50rem;
+	font-size: 2rem;
+	color: silver
+}
+   /* Responsive Design */
+
+/* Phase 1 */
+
+@media (max-width: 500px) {
+
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 414px) {
+
+  html {
+    font-size: 18%;
+  }
+
+
+.navbar {
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+.navbar-link {
+  font-size: 3.2rem;
+}
+
+.logo-w {
+  width: 40rem;
+  font-size: 5rem;
+  top: 10rem;
+  left: 5rem;
+}
+
+.ii {
+  width: 10rem;
+  left: 43rem;
+  top: 10rem;
+  font-size: 5rem;
+}
+
+.v-line-1 {
+  top: 10rem;
+  height: 5.5rem;
+}
+
+.v-line-2 {
+  top: 10rem;
+  height: 5.5rem;
+  left: 49rem;
+}
+
+.la {
+  top: 15rem;
+  font-size: 2.5rem;
+  left: 12rem;
+}
+
+.heading-author {
+  top: 25rem;
+  left: 5rem;
+  font-size: 6rem;
+}
+
+.definition {
+  top: 33rem;
+  left: 5rem;
+  width: 73rem;
+  height: 84rem;
+  font-size: 4.5rem;
+
+}
+
+.rotate_01 {
+  top: 50rem;
+  width: 60rem;
+  height: 60rem;
+  left: 98rem;
+}
+
+.mcircle {
+  top: 45rem;
+  width: 60rem;
+  height: 60rem;
+  left: 81rem;
+  border: solid 2px rgb(8, 145, 243);
+}
+
+.facebook-logo {
+  top: 200rem;
+  left: 95rem;
+}
+
+.youtube-logo {
+  top: 230rem;
+  left: 95rem;
+}
+
+.section-1 {
+  top: 0rem;
+  height: 130rem;
+}
+
+.section-2 {
+  height: 80rem;
+}
+}
+/* End of Phase 1 */
+
+
